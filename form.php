@@ -283,12 +283,12 @@
                                 </div> <!-- col.// --> 
                                 <div class="col-md-5"> 
                                     <div class="input-group input-spinner float-lg-end"> 
-                                        <button class="btn btn-light" type="button"> 
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#999" viewBox="0 0 24 24"> <path d="M19 13H5v-2h14v2z"></path> </svg> 
+                                        <button class="btn btn-light minus" type="button"> 
+                                            <img src="./assets/img/minus.svg" alt="-"> 
                                         </button> 
-                                        <input type="text" class="form-control" value="1"> 
-                                        <button class="btn btn-light" type="button"> 
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#999" viewBox="0 0 24 24"> <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"></path> </svg> 
+                                        <input type="text" class="form-control qty" value="1"> 
+                                        <button class="btn btn-light plus" type="button"> 
+                                            <img src="./assets/img/add.svg" alt="+"> 
                                         </button> 
                                     </div> <!-- input-group.// --> 
                                 </div> <!-- col.// --> 
@@ -310,12 +310,12 @@
                                 </div> <!-- col.// --> 
                                 <div class="col-md-5"> 
                                     <div class="input-group input-spinner float-lg-end"> 
-                                        <button class="btn btn-light" type="button"> 
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#999" viewBox="0 0 24 24"> <path d="M19 13H5v-2h14v2z"></path> </svg> 
+                                        <button class="btn btn-light minus" type="button"> 
+                                            <img src="./assets/img/minus.svg" alt="-">
                                         </button> 
-                                        <input type="text" class="form-control" value="1"> 
-                                        <button class="btn btn-light" type="button"> 
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#999" viewBox="0 0 24 24"> <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"></path> </svg> 
+                                        <input type="text" class="form-control qty" value="1"> 
+                                        <button class="btn btn-light plus" type="button"> 
+                                            <img src="./assets/img/add.svg" alt="+">
                                         </button> 
                                     </div> <!-- input-group.// --> 
                                 </div> <!-- col.// --> 
