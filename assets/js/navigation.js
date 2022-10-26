@@ -47,6 +47,46 @@ navigation = [
         },
       ]
     },  
+    {
+      name: 'Products',
+      id: 'products',
+      url: 'products',
+      icon: 'bi bi-card-list',
+      children: [
+        {
+          name: 'Add Product',
+          id: 'add-product',
+          url: 'add-product',
+          icon: 'bi bi-plus',
+        },
+        {
+          name: 'View Products',
+          id: 'view-products',
+          url: 'view-products',
+          icon: 'bi bi-card-list',
+        },
+      ]
+    }, 
+    {
+      name: 'Agents',
+      id: 'agents',
+      url: 'agents',
+      icon: 'bi bi-person',
+      children: [
+        {
+          name: 'Add Agent',
+          id: 'add-agent',
+          url: 'add-agent',
+          icon: 'bi bi-plus',
+        },
+        {
+          name: 'View Agents',
+          id: 'view-agents',
+          url: 'view-agents',
+          icon: 'bi bi-people-fill',
+        },
+      ]
+    },  
   ];
 
   if(navigation.length > 0){
