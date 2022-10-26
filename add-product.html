@@ -248,42 +248,48 @@
 
       <section>
         <div class="row">
-          <div class="col-md-7">
+          <div class="col-md-12">
             <div class="card">
+
               <div class="card-body">
-                <div class="d-grid mb-3">
-                  <label for="">Name</label>
-                  <input type="text" class="form-control">
-                </div>
-              
-                <div class="d-grid mb-3">
-                  <label for="">Code</label>
-                  <input type="text" class="form-control">
-                </div>
                 
-                <div class="d-grid mb-3">
-                  <label for="">Colour</label>
-                  <input type="text" class="form-control">
-                </div>
+                <form class="row g-3 needs-validation" novalidate>
+                  <div class="col-md-4">
+                    <label for="" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="" required>
+                    <div class="invalid-feedback">Please enter product name.</div>
+                  </div>
+                  <div class="col-md-4">
+                    <label for="" class="form-label">Code</label>
+                    <input type="text" class="form-control" id="" required>
+                    <div class="invalid-feedback">Please enter product code.</div>
+                  </div>
+                  <div class="col-md-4">
+                    <label for="" class="form-label">Color</label>
+                    <input type="text" class="form-control" placeholder="" required>
+                    <div class="invalid-feedback">Please enter product color.</div>
+                  </div>
+                  <div class="col-md-4">
+                    <label for="" class="form-label">Size</label>
+                    <input type="text" class="form-control" placeholder="" required>
+                    <div class="invalid-feedback">Please enter product size.</div>
+                  </div>
+                  <div class="col-md-4">
+                    <label for="" class="form-label">Quantity</label>
+                    <input type="number" class="form-control" placeholder="" required>
+                    <div class="invalid-feedback">Please enter product quantity.</div>
+                  </div>
+                  <div class="col-md-4">
+                    <label for="" class="form-label">Price</label>
+                    <input type="number" class="form-control" placeholder="" required>
+                    <div class="invalid-feedback">Please enter product price.</div>
+                  </div>
+                  <div class="text-end">
+                    <button type="submit" class="btn btn-primary">Add Product</button>
+                    <button type="reset" class="btn btn-secondary">Reset</button>
+                  </div>
+                </form><!-- End Multi Columns Form -->
                 
-                <div class="d-grid mb-3">
-                  <label for="">Size</label>
-                  <input type="text" class="form-control">
-                </div>
-                
-                <div class="d-grid mb-3">
-                  <label for="">Quantity</label>
-                  <input type="text" class="form-control">
-                </div>
-                
-                <div class="d-grid mb-3">
-                  <label for="">Price</label>
-                  <input type="text" class="form-control">
-                </div>
-                <hr>
-                <div class="float-end">
-                  <button class="btn btn-primary rounded-pill">Add Product</button>
-                </div>
               </div>
             </div>
           </div>

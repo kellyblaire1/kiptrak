@@ -1,777 +1,648 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0, user-scalable=0"
-      name="viewport">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, user-scalable=0" name="viewport">
 
-    <title>Agents :: CRM</title>
-    <meta content="" name="description">
-    <meta content="" name="keywords">
+  <title>Agents :: CRM</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
 
-    <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon">
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.gstatic.com" rel="preconnect">
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-      rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
 
-    <!-- Vendor CSS Files -->
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
-      rel="stylesheet">
-    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-    <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
-    <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
-    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-    <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
-    <!-- Template Main CSS File -->
-    <link href="assets/css/style.css" rel="stylesheet">
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <!-- <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet"> -->
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.18/css/bootstrap-select.min.css" />
-    
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
-    
-  </head>
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.18/css/bootstrap-select.min.css" />
 
-  <body>
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+  <!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css">     -->
+</head>
 
-    <!-- ======= Header ======= -->
-    <header id="header" class="header fixed-top d-flex align-items-center">
+<body>
 
-      <div class="d-flex align-items-center justify-content-between">
-        <a href="index.html" class="logo d-flex align-items-center">
-          <img src="assets/img/logo.png" alt="">
-          <span class="d-none d-lg-block project-name"></span>
-        </a>
-        <i class="bi bi-list toggle-sidebar-btn"></i>
-      </div><!-- End Logo -->
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
 
-      <div class="search-bar">
-        <form class="search-form d-flex align-items-center rounded-pill"
-          method="POST" action="#">
-          <input type="text" name="query" placeholder="Search" title="Enter
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/logo.png" alt="">
+        <span class="d-none d-lg-block project-name"></span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div><!-- End Logo -->
+
+    <div class="search-bar">
+      <form class="search-form d-flex align-items-center rounded-pill" method="POST" action="#">
+        <input type="text" name="query" placeholder="Search" title="Enter
             search keyword" class="rounded-pill">
-          <button type="submit" title="Search"><i class="bi bi-search"></i></button>
-        </form>
-      </div><!-- End Search Bar -->
+        <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+      </form>
+    </div><!-- End Search Bar -->
 
-      <nav class="header-nav ms-auto">
-        <ul class="d-flex align-items-center">
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
 
-          <li class="nav-item d-block d-lg-none">
-            <a class="nav-link nav-icon search-bar-toggle " href="#">
-              <i class="bi bi-search"></i>
-            </a>
-          </li><!-- End Search Icon-->
+        <li class="nav-item d-block d-lg-none">
+          <a class="nav-link nav-icon search-bar-toggle " href="#">
+            <i class="bi bi-search"></i>
+          </a>
+        </li><!-- End Search Icon-->
 
-          <li class="nav-item me-3">
-            <a href="pos" class="btn btn-outline-primary rounded-pill d-flex"><i
-                class="bi bi-basket"></i> <span class="ms-1 d-none d-md-block">POS</span></a>
-          </li>
+        <li class="nav-item me-3">
+          <a href="pos" class="btn btn-outline-primary rounded-pill d-flex"><i class="bi bi-basket"></i> <span
+              class="ms-1 d-none d-md-block">POS</span></a>
+        </li>
 
-          <li class="nav-item dropdown">
-            <a class="nav-link nav-icon nav-link-expand" id="btnFullscreen"
-              href="javascript:void(0)">
-              <i class="bi bi-fullscreen"></i>
-            </a>
-          </li><!-- End Notification Nav -->
+        <li class="nav-item dropdown">
+          <a class="nav-link nav-icon nav-link-expand" id="btnFullscreen" href="javascript:void(0)">
+            <i class="bi bi-fullscreen"></i>
+          </a>
+        </li><!-- End Notification Nav -->
 
-          <li class="nav-item dropdown">
+        <li class="nav-item dropdown">
 
-            <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
-              <i class="bi bi-bell"></i>
-              <span class="badge bg-primary badge-number">3</span>
-            </a><!-- End Messages Icon -->
+          <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+            <i class="bi bi-bell"></i>
+            <span class="badge bg-primary badge-number">3</span>
+          </a><!-- End Messages Icon -->
 
-            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow
               messages">
-              <li class="dropdown-header">
-                You have 3 new messages
-                <a href="#"><span class="badge rounded-pill bg-primary p-2
+            <li class="dropdown-header">
+              You have 3 new messages
+              <a href="#"><span class="badge rounded-pill bg-primary p-2
                     ms-2">View all</span></a>
-              </li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
 
-              <li class="message-item">
-                <a href="#">
-                  <img src="assets/img/messages-1.jpg" alt=""
-                    class="rounded-circle">
-                  <div>
-                    <h4>Maria Hudson</h4>
-                    <p>Velit asperiores et ducimus soluta repudiandae labore
-                      officia est ut...</p>
-                    <p>4 hrs. ago</p>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
+            <li class="message-item">
+              <a href="#">
+                <img src="assets/img/messages-1.jpg" alt="" class="rounded-circle">
+                <div>
+                  <h4>Maria Hudson</h4>
+                  <p>Velit asperiores et ducimus soluta repudiandae labore
+                    officia est ut...</p>
+                  <p>4 hrs. ago</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
 
-              <li class="message-item">
-                <a href="#">
-                  <img src="assets/img/messages-2.jpg" alt=""
-                    class="rounded-circle">
-                  <div>
-                    <h4>Anna Nelson</h4>
-                    <p>Velit asperiores et ducimus soluta repudiandae labore
-                      officia est ut...</p>
-                    <p>6 hrs. ago</p>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
+            <li class="message-item">
+              <a href="#">
+                <img src="assets/img/messages-2.jpg" alt="" class="rounded-circle">
+                <div>
+                  <h4>Anna Nelson</h4>
+                  <p>Velit asperiores et ducimus soluta repudiandae labore
+                    officia est ut...</p>
+                  <p>6 hrs. ago</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
 
-              <li class="message-item">
-                <a href="#">
-                  <img src="assets/img/messages-3.jpg" alt=""
-                    class="rounded-circle">
-                  <div>
-                    <h4>David Muldon</h4>
-                    <p>Velit asperiores et ducimus soluta repudiandae labore
-                      officia est ut...</p>
-                    <p>8 hrs. ago</p>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
+            <li class="message-item">
+              <a href="#">
+                <img src="assets/img/messages-3.jpg" alt="" class="rounded-circle">
+                <div>
+                  <h4>David Muldon</h4>
+                  <p>Velit asperiores et ducimus soluta repudiandae labore
+                    officia est ut...</p>
+                  <p>8 hrs. ago</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
 
-              <li class="dropdown-footer">
-                <a href="#">Show all messages</a>
-              </li>
+            <li class="dropdown-footer">
+              <a href="#">Show all messages</a>
+            </li>
 
-            </ul><!-- End Messages Dropdown Items -->
+          </ul><!-- End Messages Dropdown Items -->
 
-          </li><!-- End Messages Nav -->
+        </li><!-- End Messages Nav -->
 
-          <li class="nav-item dropdown pe-3">
+        <li class="nav-item dropdown pe-3">
 
-            <a class="nav-link nav-profile d-flex align-items-center pe-0"
-              href="#" data-bs-toggle="dropdown">
-              <span class="d-none d-md-block dropdown-toggle ps-2">Super Admin</span>
-              <span class="text-muted">|</span>
-              <img src="assets/img/profile-img.jpg" alt="Profile"
-                class="rounded-circle">
-            </a><!-- End Profile Iamge Icon -->
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+            <span class="d-none d-md-block dropdown-toggle ps-2">Super Admin</span>
+            <span class="text-muted">|</span>
+            <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+          </a><!-- End Profile Iamge Icon -->
 
-            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow
               profile">
-              <li class="dropdown-header">
-                <h6>Kelly O.</h6>
-                <span>Super Admin</span>
-              </li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
+            <li class="dropdown-header">
+              <h6>Kelly O.</h6>
+              <span>Super Admin</span>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
 
-              <li>
-                <a class="dropdown-item d-flex align-items-center"
-                  href="users-profile.html">
-                  <i class="bi bi-person"></i>
-                  <span>My Profile</span>
-                </a>
-              </li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                <i class="bi bi-person"></i>
+                <span>My Profile</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
 
-              <li>
-                <a class="dropdown-item d-flex align-items-center"
-                  href="users-profile.html">
-                  <i class="bi bi-gear"></i>
-                  <span>Account Settings</span>
-                </a>
-              </li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                <i class="bi bi-gear"></i>
+                <span>Account Settings</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
 
-              <li>
-                <a class="dropdown-item d-flex align-items-center"
-                  href="pages-faq.html">
-                  <i class="bi bi-question-circle"></i>
-                  <span>Need Help?</span>
-                </a>
-              </li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
+                <i class="bi bi-question-circle"></i>
+                <span>Need Help?</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
 
-              <li>
-                <a class="dropdown-item d-flex align-items-center" href="#">
-                  <i class="bi bi-box-arrow-right"></i>
-                  <span>Sign Out</span>
-                </a>
-              </li>
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="#">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>Sign Out</span>
+              </a>
+            </li>
 
-            </ul><!-- End Profile Dropdown Items -->
-          </li><!-- End Profile Nav -->
-
-        </ul>
-      </nav><!-- End Icons Navigation -->
-
-    </header><!-- End Header -->
-
-    <!-- ======= Sidebar ======= -->
-    <aside id="sidebar" class="sidebar">
-
-      <ul class="sidebar-nav" id="sidebar-nav">
+          </ul><!-- End Profile Dropdown Items -->
+        </li><!-- End Profile Nav -->
 
       </ul>
+    </nav><!-- End Icons Navigation -->
 
-    </aside><!-- End Sidebar-->
+  </header><!-- End Header -->
 
-    <main id="main" class="main">
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
 
-      <div class="pagetitle">
-        <h1>Agents</h1>
-        <nav>
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-            <li class="breadcrumb-item active">Agents</li>
-          </ol>
-        </nav>
-      </div><!-- End Page Title -->
-      <!-- <hr> -->
+    <ul class="sidebar-nav" id="sidebar-nav">
 
-      <section>
-        <div class="row">
-          <div class="col-md-12">
-            <div class="card">
-              <div class="card-body pt-3">
-                <table id="agents-table" class="display" style="width:100%">
-                  <thead>
-                      <tr>
-                          <th>Name</th>
-                          <th>Position</th>
-                          <th>Office</th>
-                          <th>Age</th>
-                          <th>Start date</th>
-                          <th>Salary</th>
-                      </tr>
-                  </thead>
-                  <tbody>
-                      <tr>
-                          <td>Tiger Nixon</td>
-                          <td>System Architect</td>
-                          <td>Edinburgh</td>
-                          <td>61</td>
-                          <td>2011-04-25</td>
-                          <td>$320,800</td>
-                      </tr>
-                      <tr>
-                          <td>Garrett Winters</td>
-                          <td>Accountant</td>
-                          <td>Tokyo</td>
-                          <td>63</td>
-                          <td>2011-07-25</td>
-                          <td>$170,750</td>
-                      </tr>
-                      <tr>
-                          <td>Ashton Cox</td>
-                          <td>Junior Technical Author</td>
-                          <td>San Francisco</td>
-                          <td>66</td>
-                          <td>2009-01-12</td>
-                          <td>$86,000</td>
-                      </tr>
-                      <tr>
-                          <td>Cedric Kelly</td>
-                          <td>Senior Javascript Developer</td>
-                          <td>Edinburgh</td>
-                          <td>22</td>
-                          <td>2012-03-29</td>
-                          <td>$433,060</td>
-                      </tr>
-                      <tr>
-                          <td>Airi Satou</td>
-                          <td>Accountant</td>
-                          <td>Tokyo</td>
-                          <td>33</td>
-                          <td>2008-11-28</td>
-                          <td>$162,700</td>
-                      </tr>
-                      <tr>
-                          <td>Brielle Williamson</td>
-                          <td>Integration Specialist</td>
-                          <td>New York</td>
-                          <td>61</td>
-                          <td>2012-12-02</td>
-                          <td>$372,000</td>
-                      </tr>
-                      <tr>
-                          <td>Herrod Chandler</td>
-                          <td>Sales Assistant</td>
-                          <td>San Francisco</td>
-                          <td>59</td>
-                          <td>2012-08-06</td>
-                          <td>$137,500</td>
-                      </tr>
-                      <tr>
-                          <td>Rhona Davidson</td>
-                          <td>Integration Specialist</td>
-                          <td>Tokyo</td>
-                          <td>55</td>
-                          <td>2010-10-14</td>
-                          <td>$327,900</td>
-                      </tr>
-                      <tr>
-                          <td>Colleen Hurst</td>
-                          <td>Javascript Developer</td>
-                          <td>San Francisco</td>
-                          <td>39</td>
-                          <td>2009-09-15</td>
-                          <td>$205,500</td>
-                      </tr>
-                      <tr>
-                          <td>Sonya Frost</td>
-                          <td>Software Engineer</td>
-                          <td>Edinburgh</td>
-                          <td>23</td>
-                          <td>2008-12-13</td>
-                          <td>$103,600</td>
-                      </tr>
-                      <tr>
-                          <td>Jena Gaines</td>
-                          <td>Office Manager</td>
-                          <td>London</td>
-                          <td>30</td>
-                          <td>2008-12-19</td>
-                          <td>$90,560</td>
-                      </tr>
-                      <tr>
-                          <td>Quinn Flynn</td>
-                          <td>Support Lead</td>
-                          <td>Edinburgh</td>
-                          <td>22</td>
-                          <td>2013-03-03</td>
-                          <td>$342,000</td>
-                      </tr>
-                      <tr>
-                          <td>Charde Marshall</td>
-                          <td>Regional Director</td>
-                          <td>San Francisco</td>
-                          <td>36</td>
-                          <td>2008-10-16</td>
-                          <td>$470,600</td>
-                      </tr>
-                      <tr>
-                          <td>Haley Kennedy</td>
-                          <td>Senior Marketing Designer</td>
-                          <td>London</td>
-                          <td>43</td>
-                          <td>2012-12-18</td>
-                          <td>$313,500</td>
-                      </tr>
-                      <tr>
-                          <td>Tatyana Fitzpatrick</td>
-                          <td>Regional Director</td>
-                          <td>London</td>
-                          <td>19</td>
-                          <td>2010-03-17</td>
-                          <td>$385,750</td>
-                      </tr>
-                      <tr>
-                          <td>Michael Silva</td>
-                          <td>Marketing Designer</td>
-                          <td>London</td>
-                          <td>66</td>
-                          <td>2012-11-27</td>
-                          <td>$198,500</td>
-                      </tr>
-                      <tr>
-                          <td>Paul Byrd</td>
-                          <td>Chief Financial Officer (CFO)</td>
-                          <td>New York</td>
-                          <td>64</td>
-                          <td>2010-06-09</td>
-                          <td>$725,000</td>
-                      </tr>
-                      <tr>
-                          <td>Gloria Little</td>
-                          <td>Systems Administrator</td>
-                          <td>New York</td>
-                          <td>59</td>
-                          <td>2009-04-10</td>
-                          <td>$237,500</td>
-                      </tr>
-                      <tr>
-                          <td>Bradley Greer</td>
-                          <td>Software Engineer</td>
-                          <td>London</td>
-                          <td>41</td>
-                          <td>2012-10-13</td>
-                          <td>$132,000</td>
-                      </tr>
-                      <tr>
-                          <td>Dai Rios</td>
-                          <td>Personnel Lead</td>
-                          <td>Edinburgh</td>
-                          <td>35</td>
-                          <td>2012-09-26</td>
-                          <td>$217,500</td>
-                      </tr>
-                      <tr>
-                          <td>Jenette Caldwell</td>
-                          <td>Development Lead</td>
-                          <td>New York</td>
-                          <td>30</td>
-                          <td>2011-09-03</td>
-                          <td>$345,000</td>
-                      </tr>
-                      <tr>
-                          <td>Yuri Berry</td>
-                          <td>Chief Marketing Officer (CMO)</td>
-                          <td>New York</td>
-                          <td>40</td>
-                          <td>2009-06-25</td>
-                          <td>$675,000</td>
-                      </tr>
-                      <tr>
-                          <td>Caesar Vance</td>
-                          <td>Pre-Sales Support</td>
-                          <td>New York</td>
-                          <td>21</td>
-                          <td>2011-12-12</td>
-                          <td>$106,450</td>
-                      </tr>
-                      <tr>
-                          <td>Doris Wilder</td>
-                          <td>Sales Assistant</td>
-                          <td>Sydney</td>
-                          <td>23</td>
-                          <td>2010-09-20</td>
-                          <td>$85,600</td>
-                      </tr>
-                      <tr>
-                          <td>Angelica Ramos</td>
-                          <td>Chief Executive Officer (CEO)</td>
-                          <td>London</td>
-                          <td>47</td>
-                          <td>2009-10-09</td>
-                          <td>$1,200,000</td>
-                      </tr>
-                      <tr>
-                          <td>Gavin Joyce</td>
-                          <td>Developer</td>
-                          <td>Edinburgh</td>
-                          <td>42</td>
-                          <td>2010-12-22</td>
-                          <td>$92,575</td>
-                      </tr>
-                      <tr>
-                          <td>Jennifer Chang</td>
-                          <td>Regional Director</td>
-                          <td>Singapore</td>
-                          <td>28</td>
-                          <td>2010-11-14</td>
-                          <td>$357,650</td>
-                      </tr>
-                      <tr>
-                          <td>Brenden Wagner</td>
-                          <td>Software Engineer</td>
-                          <td>San Francisco</td>
-                          <td>28</td>
-                          <td>2011-06-07</td>
-                          <td>$206,850</td>
-                      </tr>
-                      <tr>
-                          <td>Fiona Green</td>
-                          <td>Chief Operating Officer (COO)</td>
-                          <td>San Francisco</td>
-                          <td>48</td>
-                          <td>2010-03-11</td>
-                          <td>$850,000</td>
-                      </tr>
-                      <tr>
-                          <td>Shou Itou</td>
-                          <td>Regional Marketing</td>
-                          <td>Tokyo</td>
-                          <td>20</td>
-                          <td>2011-08-14</td>
-                          <td>$163,000</td>
-                      </tr>
-                      <tr>
-                          <td>Michelle House</td>
-                          <td>Integration Specialist</td>
-                          <td>Sydney</td>
-                          <td>37</td>
-                          <td>2011-06-02</td>
-                          <td>$95,400</td>
-                      </tr>
-                      <tr>
-                          <td>Suki Burks</td>
-                          <td>Developer</td>
-                          <td>London</td>
-                          <td>53</td>
-                          <td>2009-10-22</td>
-                          <td>$114,500</td>
-                      </tr>
-                      <tr>
-                          <td>Prescott Bartlett</td>
-                          <td>Technical Author</td>
-                          <td>London</td>
-                          <td>27</td>
-                          <td>2011-05-07</td>
-                          <td>$145,000</td>
-                      </tr>
-                      <tr>
-                          <td>Gavin Cortez</td>
-                          <td>Team Leader</td>
-                          <td>San Francisco</td>
-                          <td>22</td>
-                          <td>2008-10-26</td>
-                          <td>$235,500</td>
-                      </tr>
-                      <tr>
-                          <td>Martena Mccray</td>
-                          <td>Post-Sales support</td>
-                          <td>Edinburgh</td>
-                          <td>46</td>
-                          <td>2011-03-09</td>
-                          <td>$324,050</td>
-                      </tr>
-                      <tr>
-                          <td>Unity Butler</td>
-                          <td>Marketing Designer</td>
-                          <td>San Francisco</td>
-                          <td>47</td>
-                          <td>2009-12-09</td>
-                          <td>$85,675</td>
-                      </tr>
-                      <tr>
-                          <td>Howard Hatfield</td>
-                          <td>Office Manager</td>
-                          <td>San Francisco</td>
-                          <td>51</td>
-                          <td>2008-12-16</td>
-                          <td>$164,500</td>
-                      </tr>
-                      <tr>
-                          <td>Hope Fuentes</td>
-                          <td>Secretary</td>
-                          <td>San Francisco</td>
-                          <td>41</td>
-                          <td>2010-02-12</td>
-                          <td>$109,850</td>
-                      </tr>
-                      <tr>
-                          <td>Vivian Harrell</td>
-                          <td>Financial Controller</td>
-                          <td>San Francisco</td>
-                          <td>62</td>
-                          <td>2009-02-14</td>
-                          <td>$452,500</td>
-                      </tr>
-                      <tr>
-                          <td>Timothy Mooney</td>
-                          <td>Office Manager</td>
-                          <td>London</td>
-                          <td>37</td>
-                          <td>2008-12-11</td>
-                          <td>$136,200</td>
-                      </tr>
-                      <tr>
-                          <td>Jackson Bradshaw</td>
-                          <td>Director</td>
-                          <td>New York</td>
-                          <td>65</td>
-                          <td>2008-09-26</td>
-                          <td>$645,750</td>
-                      </tr>
-                      <tr>
-                          <td>Olivia Liang</td>
-                          <td>Support Engineer</td>
-                          <td>Singapore</td>
-                          <td>64</td>
-                          <td>2011-02-03</td>
-                          <td>$234,500</td>
-                      </tr>
-                      <tr>
-                          <td>Bruno Nash</td>
-                          <td>Software Engineer</td>
-                          <td>London</td>
-                          <td>38</td>
-                          <td>2011-05-03</td>
-                          <td>$163,500</td>
-                      </tr>
-                      <tr>
-                          <td>Sakura Yamamoto</td>
-                          <td>Support Engineer</td>
-                          <td>Tokyo</td>
-                          <td>37</td>
-                          <td>2009-08-19</td>
-                          <td>$139,575</td>
-                      </tr>
-                      <tr>
-                          <td>Thor Walton</td>
-                          <td>Developer</td>
-                          <td>New York</td>
-                          <td>61</td>
-                          <td>2013-08-11</td>
-                          <td>$98,540</td>
-                      </tr>
-                      <tr>
-                          <td>Finn Camacho</td>
-                          <td>Support Engineer</td>
-                          <td>San Francisco</td>
-                          <td>47</td>
-                          <td>2009-07-07</td>
-                          <td>$87,500</td>
-                      </tr>
-                      <tr>
-                          <td>Serge Baldwin</td>
-                          <td>Data Coordinator</td>
-                          <td>Singapore</td>
-                          <td>64</td>
-                          <td>2012-04-09</td>
-                          <td>$138,575</td>
-                      </tr>
-                      <tr>
-                          <td>Zenaida Frank</td>
-                          <td>Software Engineer</td>
-                          <td>New York</td>
-                          <td>63</td>
-                          <td>2010-01-04</td>
-                          <td>$125,250</td>
-                      </tr>
-                      <tr>
-                          <td>Zorita Serrano</td>
-                          <td>Software Engineer</td>
-                          <td>San Francisco</td>
-                          <td>56</td>
-                          <td>2012-06-01</td>
-                          <td>$115,000</td>
-                      </tr>
-                      <tr>
-                          <td>Jennifer Acosta</td>
-                          <td>Junior Javascript Developer</td>
-                          <td>Edinburgh</td>
-                          <td>43</td>
-                          <td>2013-02-01</td>
-                          <td>$75,650</td>
-                      </tr>
-                      <tr>
-                          <td>Cara Stevens</td>
-                          <td>Sales Assistant</td>
-                          <td>New York</td>
-                          <td>46</td>
-                          <td>2011-12-06</td>
-                          <td>$145,600</td>
-                      </tr>
-                      <tr>
-                          <td>Hermione Butler</td>
-                          <td>Regional Director</td>
-                          <td>London</td>
-                          <td>47</td>
-                          <td>2011-03-21</td>
-                          <td>$356,250</td>
-                      </tr>
-                      <tr>
-                          <td>Lael Greer</td>
-                          <td>Systems Administrator</td>
-                          <td>London</td>
-                          <td>21</td>
-                          <td>2009-02-27</td>
-                          <td>$103,500</td>
-                      </tr>
-                      <tr>
-                          <td>Jonas Alexander</td>
-                          <td>Developer</td>
-                          <td>San Francisco</td>
-                          <td>30</td>
-                          <td>2010-07-14</td>
-                          <td>$86,500</td>
-                      </tr>
-                      <tr>
-                          <td>Shad Decker</td>
-                          <td>Regional Director</td>
-                          <td>Edinburgh</td>
-                          <td>51</td>
-                          <td>2008-11-13</td>
-                          <td>$183,000</td>
-                      </tr>
-                      <tr>
-                          <td>Michael Bruce</td>
-                          <td>Javascript Developer</td>
-                          <td>Singapore</td>
-                          <td>29</td>
-                          <td>2011-06-27</td>
-                          <td>$183,000</td>
-                      </tr>
-                      <tr>
-                          <td>Donna Snider</td>
-                          <td>Customer Support</td>
-                          <td>New York</td>
-                          <td>27</td>
-                          <td>2011-01-25</td>
-                          <td>$112,000</td>
-                      </tr>
-                  </tbody>
-                  <tfoot>
-                      <tr>
-                          <th>Name</th>
-                          <th>Position</th>
-                          <th>Office</th>
-                          <th>Age</th>
-                          <th>Start date</th>
-                          <th>Salary</th>
-                      </tr>
-                  </tfoot>
+    </ul>
+
+  </aside><!-- End Sidebar-->
+
+  <main id="main" class="main">
+
+    <div class="pagetitle">
+      <h1>Agents</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active">Agents</li>
+        </ol>
+      </nav>
+    </div><!-- End Page Title -->
+    <!-- <hr> -->
+    <section class="users-list-wrapper">
+      <div class="users-list-filter px-1">
+        <form>
+          <div class="row border rounded py-2 mb-2">
+
+            <div class="col-12 col-md-6 col-lg-3">
+              <label for="users-list-verified">Country</label>
+              <fieldset class="form-group">
+                <select class="form-select" name="country" id="country">
+                  <option value="1">Afghanistan</option>
+                  <option value="2">Aland Islands</option>
+                  <option value="3">Albania</option>
+                  <option value="4">Algeria</option>
+                  <option value="5">American Samoa</option>
+                  <option value="6">Andorra</option>
+                  <option value="7">Angola</option>
+                  <option value="8">Anguilla</option>
+                  <option value="9">Antarctica</option>
+                  <option value="10">Antigua And Barbuda</option>
+                  <option value="11">Argentina</option>
+                  <option value="12">Armenia</option>
+                  <option value="13">Aruba</option>
+                  <option value="14">Australia</option>
+                  <option value="15">Austria</option>
+                  <option value="16">Azerbaijan</option>
+                  <option value="17">Bahamas The</option>
+                  <option value="18">Bahrain</option>
+                  <option value="19">Bangladesh</option>
+                  <option value="20">Barbados</option>
+                  <option value="21">Belarus</option>
+                  <option value="22">Belgium</option>
+                  <option value="23">Belize</option>
+                  <option value="24">Benin</option>
+                  <option value="25">Bermuda</option>
+                  <option value="26">Bhutan</option>
+                  <option value="27">Bolivia</option>
+                  <option value="155">Bonaire, Sint Eustatius and Saba</option>
+                  <option value="28">Bosnia and Herzegovina</option>
+                  <option value="29">Botswana</option>
+                  <option value="30">Bouvet Island</option>
+                  <option value="31">Brazil</option>
+                  <option value="32">British Indian Ocean Territory</option>
+                  <option value="33">Brunei</option>
+                  <option value="34">Bulgaria</option>
+                  <option value="35">Burkina Faso</option>
+                  <option value="36">Burundi</option>
+                  <option value="37">Cambodia</option>
+                  <option value="38">Cameroon</option>
+                  <option value="39">Canada</option>
+                  <option value="40">Cape Verde</option>
+                  <option value="41">Cayman Islands</option>
+                  <option value="42">Central African Republic</option>
+                  <option value="43">Chad</option>
+                  <option value="44">Chile</option>
+                  <option value="45">China</option>
+                  <option value="46">Christmas Island</option>
+                  <option value="47">Cocos (Keeling) Islands</option>
+                  <option value="48">Colombia</option>
+                  <option value="49">Comoros</option>
+                  <option value="50">Congo</option>
+                  <option value="52">Cook Islands</option>
+                  <option value="53">Costa Rica</option>
+                  <option value="54">Cote DIvoire (Ivory Coast)</option>
+                  <option value="55">Croatia</option>
+                  <option value="56">Cuba</option>
+                  <option value="249">Curacao</option>
+                  <option value="57">Cyprus</option>
+                  <option value="58">Czech Republic</option>
+                  <option value="51">Democratic Republic of the Congo</option>
+                  <option value="59">Denmark</option>
+                  <option value="60">Djibouti</option>
+                  <option value="61">Dominica</option>
+                  <option value="62">Dominican Republic</option>
+                  <option value="63">East Timor</option>
+                  <option value="64">Ecuador</option>
+                  <option value="65">Egypt</option>
+                  <option value="66">El Salvador</option>
+                  <option value="67">Equatorial Guinea</option>
+                  <option value="68">Eritrea</option>
+                  <option value="69">Estonia</option>
+                  <option value="70">Ethiopia</option>
+                  <option value="71">Falkland Islands</option>
+                  <option value="72">Faroe Islands</option>
+                  <option value="73">Fiji Islands</option>
+                  <option value="74">Finland</option>
+                  <option value="75">France</option>
+                  <option value="76">French Guiana</option>
+                  <option value="77">French Polynesia</option>
+                  <option value="78">French Southern Territories</option>
+                  <option value="79">Gabon</option>
+                  <option value="80">Gambia The</option>
+                  <option value="81">Georgia</option>
+                  <option value="82">Germany</option>
+                  <option value="83">Ghana</option>
+                  <option value="84">Gibraltar</option>
+                  <option value="85">Greece</option>
+                  <option value="86">Greenland</option>
+                  <option value="87">Grenada</option>
+                  <option value="88">Guadeloupe</option>
+                  <option value="89">Guam</option>
+                  <option value="90">Guatemala</option>
+                  <option value="91">Guernsey and Alderney</option>
+                  <option value="92">Guinea</option>
+                  <option value="93">Guinea-Bissau</option>
+                  <option value="94">Guyana</option>
+                  <option value="95">Haiti</option>
+                  <option value="96">Heard Island and McDonald Islands</option>
+                  <option value="97">Honduras</option>
+                  <option value="98">Hong Kong S.A.R.</option>
+                  <option value="99">Hungary</option>
+                  <option value="100">Iceland</option>
+                  <option value="101">India</option>
+                  <option value="102">Indonesia</option>
+                  <option value="103">Iran</option>
+                  <option value="104">Iraq</option>
+                  <option value="105">Ireland</option>
+                  <option value="106">Israel</option>
+                  <option value="107">Italy</option>
+                  <option value="108">Jamaica</option>
+                  <option value="109">Japan</option>
+                  <option value="110">Jersey</option>
+                  <option value="111">Jordan</option>
+                  <option value="112">Kazakhstan</option>
+                  <option value="113">Kenya</option>
+                  <option value="114">Kiribati</option>
+                  <option value="248">Kosovo</option>
+                  <option value="117">Kuwait</option>
+                  <option value="118">Kyrgyzstan</option>
+                  <option value="119">Laos</option>
+                  <option value="120">Latvia</option>
+                  <option value="121">Lebanon</option>
+                  <option value="122">Lesotho</option>
+                  <option value="123">Liberia</option>
+                  <option value="124">Libya</option>
+                  <option value="125">Liechtenstein</option>
+                  <option value="126">Lithuania</option>
+                  <option value="127">Luxembourg</option>
+                  <option value="128">Macau S.A.R.</option>
+                  <option value="129">Macedonia</option>
+                  <option value="130">Madagascar</option>
+                  <option value="131">Malawi</option>
+                  <option value="132">Malaysia</option>
+                  <option value="133">Maldives</option>
+                  <option value="134">Mali</option>
+                  <option value="135">Malta</option>
+                  <option value="136">Man (Isle of)</option>
+                  <option value="137">Marshall Islands</option>
+                  <option value="138">Martinique</option>
+                  <option value="139">Mauritania</option>
+                  <option value="140">Mauritius</option>
+                  <option value="141">Mayotte</option>
+                  <option value="142">Mexico</option>
+                  <option value="143">Micronesia</option>
+                  <option value="144">Moldova</option>
+                  <option value="145">Monaco</option>
+                  <option value="146">Mongolia</option>
+                  <option value="147">Montenegro</option>
+                  <option value="148">Montserrat</option>
+                  <option value="149">Morocco</option>
+                  <option value="150">Mozambique</option>
+                  <option value="151">Myanmar</option>
+                  <option value="152">Namibia</option>
+                  <option value="153">Nauru</option>
+                  <option value="154">Nepal</option>
+                  <option value="156">Netherlands</option>
+                  <option value="157">New Caledonia</option>
+                  <option value="158">New Zealand</option>
+                  <option value="159">Nicaragua</option>
+                  <option value="160">Niger</option>
+                  <option value="161" selected="">Nigeria</option>
+                  <option value="162">Niue</option>
+                  <option value="163">Norfolk Island</option>
+                  <option value="115">North Korea</option>
+                  <option value="164">Northern Mariana Islands</option>
+                  <option value="165">Norway</option>
+                  <option value="166">Oman</option>
+                  <option value="167">Pakistan</option>
+                  <option value="168">Palau</option>
+                  <option value="169">Palestinian Territory Occupied</option>
+                  <option value="170">Panama</option>
+                  <option value="171">Papua new Guinea</option>
+                  <option value="172">Paraguay</option>
+                  <option value="173">Peru</option>
+                  <option value="174">Philippines</option>
+                  <option value="175">Pitcairn Island</option>
+                  <option value="176">Poland</option>
+                  <option value="177">Portugal</option>
+                  <option value="178">Puerto Rico</option>
+                  <option value="179">Qatar</option>
+                  <option value="180">Reunion</option>
+                  <option value="181">Romania</option>
+                  <option value="182">Russia</option>
+                  <option value="183">Rwanda</option>
+                  <option value="184">Saint Helena</option>
+                  <option value="185">Saint Kitts And Nevis</option>
+                  <option value="186">Saint Lucia</option>
+                  <option value="187">Saint Pierre and Miquelon</option>
+                  <option value="188">Saint Vincent And The Grenadines</option>
+                  <option value="189">Saint-Barthelemy</option>
+                  <option value="190">Saint-Martin (French part)</option>
+                  <option value="191">Samoa</option>
+                  <option value="192">San Marino</option>
+                  <option value="193">Sao Tome and Principe</option>
+                  <option value="194">Saudi Arabia</option>
+                  <option value="195">Senegal</option>
+                  <option value="196">Serbia</option>
+                  <option value="197">Seychelles</option>
+                  <option value="198">Sierra Leone</option>
+                  <option value="199">Singapore</option>
+                  <option value="250">Sint Maarten (Dutch part)</option>
+                  <option value="200">Slovakia</option>
+                  <option value="201">Slovenia</option>
+                  <option value="202">Solomon Islands</option>
+                  <option value="203">Somalia</option>
+                  <option value="204">South Africa</option>
+                  <option value="205">South Georgia</option>
+                  <option value="116">South Korea</option>
+                  <option value="206">South Sudan</option>
+                  <option value="207">Spain</option>
+                  <option value="208">Sri Lanka</option>
+                  <option value="209">Sudan</option>
+                  <option value="210">Suriname</option>
+                  <option value="211">Svalbard And Jan Mayen Islands</option>
+                  <option value="212">Swaziland</option>
+                  <option value="213">Sweden</option>
+                  <option value="214">Switzerland</option>
+                  <option value="215">Syria</option>
+                  <option value="216">Taiwan</option>
+                  <option value="217">Tajikistan</option>
+                  <option value="218">Tanzania</option>
+                  <option value="219">Thailand</option>
+                  <option value="220">Togo</option>
+                  <option value="221">Tokelau</option>
+                  <option value="222">Tonga</option>
+                  <option value="223">Trinidad And Tobago</option>
+                  <option value="224">Tunisia</option>
+                  <option value="225">Turkey</option>
+                  <option value="226">Turkmenistan</option>
+                  <option value="227">Turks And Caicos Islands</option>
+                  <option value="228">Tuvalu</option>
+                  <option value="229">Uganda</option>
+                  <option value="230">Ukraine</option>
+                  <option value="231">United Arab Emirates</option>
+                  <option value="232">United Kingdom</option>
+                  <option value="233">United States</option>
+                  <option value="234">United States Minor Outlying Islands</option>
+                  <option value="235">Uruguay</option>
+                  <option value="236">Uzbekistan</option>
+                  <option value="237">Vanuatu</option>
+                  <option value="238">Vatican City State (Holy See)</option>
+                  <option value="239">Venezuela</option>
+                  <option value="240">Vietnam</option>
+                  <option value="241">Virgin Islands (British)</option>
+                  <option value="242">Virgin Islands (US)</option>
+                  <option value="243">Wallis And Futuna Islands</option>
+                  <option value="244">Western Sahara</option>
+                  <option value="245">Yemen</option>
+                  <option value="246">Zambia</option>
+                  <option value="247">Zimbabwe</option>
+                </select>
+              </fieldset>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3">
+              <label for="users-list-verified">State</label>
+              <fieldset class="form-group">
+                <select class="form-select" id="users-list-verified">
+                  <option value="">Select State/Region</option>
+
+                  <option value="Abia">Abia</option>
+                  <option value="Abuja">Abuja</option>
+                  <option value="Adamawa">Adamawa</option>
+                  <option value="Akwa Ibom">Akwa Ibom</option>
+                  <option value="Anambra">Anambra</option>
+                  <option value="Bauchi">Bauchi</option>
+                  <option value="Bayelsa">Bayelsa</option>
+                  <option value="Benue">Benue</option>
+                  <option value="Borno">Borno</option>
+                  <option value="Cross River">Cross River</option>
+                  <option value="Delta">Delta</option>
+                  <option value="Ebonyi">Ebonyi</option>
+                  <option value="Edo">Edo</option>
+                  <option value="Ekiti">Ekiti</option>
+                  <option value="Enugu">Enugu</option>
+                  <option value="Gombe">Gombe</option>
+                  <option value="Imo">Imo</option>
+                  <option value="Jigawa">Jigawa</option>
+                  <option value="Kaduna">Kaduna</option>
+                  <option value="Kano">Kano</option>
+                  <option value="Katsina">Katsina</option>
+                  <option value="Kebbi">Kebbi</option>
+                  <option value="Kogi">Kogi</option>
+                  <option value="Kwara">Kwara</option>
+                  <option value="Lagos">Lagos</option>
+                  <option value="Nasarawa">Nasarawa</option>
+                  <option value="Niger">Niger</option>
+                  <option value="Ogun">Ogun</option>
+                  <option value="Ondo">Ondo</option>
+                  <option value="Osun">Osun</option>
+                  <option value="Oyo">Oyo</option>
+                  <option value="Plateau">Plateau</option>
+                  <option value="Rivers">Rivers</option>
+                  <option value="Sokoto">Sokoto</option>
+                  <option value="Taraba">Taraba</option>
+                  <option value="Yobe">Yobe</option>
+                  <option value="Zamfara">Zamfara</option>
+
+                </select>
+              </fieldset>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3 d-flex align-items-end">
+              <div class="d-grid w-100">
+                <button type="reset" class="btn btn-primary btn-block glow users-list-clear mb-0">Clear</button>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3 d-flex align-items-end">
+              <div class="d-grid w-100">
+                <button type="button" class="btn btn-primary btn-block glow users-list-clear mb-0" onclick="window.location='add-agent'"><i class="bx bx-plus"></i>Add Agent</button>
+              </div>
+            </div>
+
+          </div>
+        </form>
+      </div>
+
+    </section>
+
+    <section>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-body pt-3">
+              <table id="agents-table" class="table table-striped" style="width:100%">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Company/Agents Name</th>
+                    <th>Country</th>
+                    <th>State</th>
+                    <th>Address</th>
+                    <th>Phone Numbers</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>2</td>
+                    <td>Tiger Nixon</td>
+                    <td>Nigeria</td>
+                    <td>California</td>
+                    <td>61 Edinburgh</td>
+                    <td>1245789</td>
+                    <td>Active</td>
+                    <td>
+                      <div class="d-flex">
+                        <button class="btn btn-success btn-sm me-2"><i class="bi bi-pencil-square"></i></button>
+                        <button class="btn btn-danger btn-sm"><i class="bi bi-trash"></i></button>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
               </table>
 
-              </div>
             </div>
           </div>
         </div>
-      </section>
-
-    </main><!-- End #main -->
-
-    <!-- ======= Footer ======= -->
-    <footer id="footer" class="footer">
-      <div class="copyright">
-        &copy; <span class="copyright-date"></span> <strong><span
-            class="project-name"></span></strong>. All rights reserved
       </div>
-    </footer><!-- End Footer -->
+    </section>
 
-    <a href="#" class="back-to-top d-flex align-items-center
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; <span class="copyright-date"></span> <strong><span class="project-name"></span></strong>. All rights
+      reserved
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center
       justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-    <!-- Vendor JS Files -->
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
-    <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/chart.js/chart.min.js"></script>
-    <script src="assets/vendor/echarts/echarts.min.js"></script>
-    <script src="assets/vendor/quill/quill.min.js"></script>
-    <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
-    <script src="assets/vendor/tinymce/tinymce.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
+  <!-- Vendor JS Files -->
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.min.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+  <script src="assets/vendor/quill/quill.min.js"></script>
+  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
 
-    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+  <script type="text/javascript" charset="utf8"
+    src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+  <!-- <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script> -->
 
-    <!-- Template Main JS File -->
-    <script src="assets/js/main.js?v=1.2"></script>
-    <script src="assets/js/navigation.js?v=1.2"></script>
 
-    <script>
-      $(document).ready(function () {
-          $('#agents-table').DataTable();
-      });
-    </script>
-  </body>
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js?v=1.2"></script>
+  <script src="assets/js/navigation.js?v=1.2"></script>
+
+  <script>
+    $(document).ready(function () {
+      $('#agents-table').DataTable();
+    });
+  </script>
+</body>
 
 </html>

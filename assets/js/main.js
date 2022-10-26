@@ -4,12 +4,15 @@
   /** Set Parameters */
   const today = new Date().getFullYear();
   const copyrightDate = document.querySelectorAll('.copyright-date');
-  if(copyrightDate.length > 0) copyrightDate.innerHTML = today;
+  for (let i = 0; i < copyrightDate.length; i++) {
+    const date = copyrightDate[i];
+    date.innerHTML = today;
+  }
   
   /** Initialize Business Name  */
   const projectName = document.querySelectorAll('.project-name');
   for (let i = 0; i < projectName.length; i++) {
-    projectName[i].innerHTML = "Sunny CRM";
+    projectName[i].innerHTML = "KipTrak";
   }  
   
   /** Initialize Currency  */

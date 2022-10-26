@@ -22,7 +22,7 @@ navigation = [
         {
           name: 'View Orders',
           id: 'view-orders',
-          url: 'view-orders',
+          url: 'orders',
           icon: 'bi bi-cart3',
         },
       ]
