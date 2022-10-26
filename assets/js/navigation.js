@@ -13,18 +13,18 @@ navigation = [
       url: 'orders',
       icon: 'bi bi-cart3',
       children: [
-        // {
-        //   name: 'Create Order',
-        //   id: 'create-order',
-        //   url: 'create-order',
-        //   icon: 'bi bi-plus',
-        // },
-        // {
-        //   name: 'View Orders',
-        //   id: 'view-orders',
-        //   url: 'view-orders',
-        //   icon: 'bi bi-cart3',
-        // },
+        {
+          name: 'Create Order',
+          id: 'create-order',
+          url: 'create-order',
+          icon: 'bi bi-plus',
+        },
+        {
+          name: 'View Orders',
+          id: 'view-orders',
+          url: 'view-orders',
+          icon: 'bi bi-cart3',
+        },
       ]
     },
     {
