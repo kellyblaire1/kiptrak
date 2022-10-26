@@ -62,7 +62,7 @@ navigation = [
         {
           name: 'View Products',
           id: 'view-products',
-          url: 'view-products',
+          url: 'products',
           icon: 'bi bi-card-list',
         },
       ]
@@ -82,7 +82,7 @@ navigation = [
         {
           name: 'View Agents',
           id: 'view-agents',
-          url: 'view-agents',
+          url: 'agents',
           icon: 'bi bi-people-fill',
         },
       ]

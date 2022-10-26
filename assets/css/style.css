@@ -1258,3 +1258,11 @@ h6 {
   font-size: 13px;
   color: #012970;
 }
+
+.card-body {
+  padding-top: 20px;
+}
+
+label {
+  font-size: 12px!important;
+}
