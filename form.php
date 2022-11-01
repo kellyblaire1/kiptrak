@@ -366,19 +366,160 @@
             </div>
         </div>
         
-        <!-- CHECKOUT VIEW -->
-        <div class="row view" id="thank-you" style="display: none;">
-            <article class="card shadow-sm">
-                <div class="card-body"> 
-                    <div class="mt-4 mx-auto text-center" style="max-width:600px">
-                        <svg width="96px" height="96px" viewBox="0 0 96 96" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="round-check"> <circle id="Oval" fill="#D3FFD9" cx="48" cy="48" r="48"></circle> <circle id="Oval-Copy" fill="#87FF96" cx="48" cy="48" r="36"></circle> <polyline id="Line" stroke="#04B800" stroke-width="4" stroke-linecap="round" points="34.188562 49.6867496 44 59.3734993 63.1968462 40.3594229"></polyline> </g> </g> </svg> 
-                        <div class="my-3"> 
-                            <h4>Thank you for order</h4> 
-                            <p>We have received your order confirmation. One of our agents will contact you shortly.</p> 
+        <!-- THANK-YOU VIEW -->
+        <div class="row view" id="thank-you" style="display: none;"> 
+        <div class="row">
+        <div class="col-lg-12 mb-3">
+                <article class="card shadow-sm">
+                    <div class="card-body"> 
+                        <div class="mt-4 mx-auto text-center" style="max-width:600px">
+                            <svg width="96px" height="96px" viewBox="0 0 96 96" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="round-check"> <circle id="Oval" fill="#D3FFD9" cx="48" cy="48" r="48"></circle> <circle id="Oval-Copy" fill="#87FF96" cx="48" cy="48" r="36"></circle> <polyline id="Line" stroke="#04B800" stroke-width="4" stroke-linecap="round" points="34.188562 49.6867496 44 59.3734993 63.1968462 40.3594229"></polyline> </g> </g> </svg> 
+                            <div class="my-3"> 
+                                <h4>Thank you for order</h4> 
+                                <p>We have received your order confirmation. One of our agents will contact you shortly.</p> 
+                            </div>
+                        </div>                 
+                    </div>
+                </article>    
+            </div>
+            <div class="col-lg-4" style="display: none;">
+                <article class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Order Receipt</h5>
+                        <hr>
+                        <div class="itemside mb-3">
+                            <div class="aside">
+                                <span class="icon-sm text-primary bg-success rounded-circle rounded"><i class="bi bi-cart-check-fill text-white"></i></span>
+                            </div> 
+                            <div class="info lh-sm">
+                                <strong>Order ID: 2313440</strong><br> 
+                                <span class="text-muted">Wed, Sept 13, 2021</span>
+                            </div>
                         </div>
-                    </div>                 
-                </div>
-            </article>
+                        <dl class="dlist-align">
+                            <dt>Method:</dt> <dd>Cash Payment</dd>
+                        </dl>
+                        <dl class="dlist-align">
+                            <dt>Billed to:</dt> <dd>Sunny Raph</dd>
+                        </dl>
+                        <dl class="dlist-align">
+                            <dt>No. of Items:</dt> <dd>7 <a href="#">(View Items)</a> </dd>
+                        </dl>
+                        <dl class="dlist-align">
+                            <dt>Checkout Amount:</dt> <dd>N78,135.00</dd> 
+                        </dl> 
+                        <hr> 
+                        <a href="#" class="btn btn-light"><i class="bi bi-download"></i> Download Invoice</a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-lg-12">
+                <article class="card shadow-sm mb-3">
+                    <div class="card-body">
+                        <header class="d-md-flex">
+                            <div class="flex-grow-1">
+                                <h6 class="mb-0"> Order ID: #1234 <i class="dot"></i><span class="text-danger"> Pending </span> </h6> 
+                                <span>Date: 1 November 2022</span> 
+                            </div> 
+                            <div> 
+                                <!-- <a href="#" class="btn btn-sm btn-outline-danger">Cancel order</a> -->
+                                <a href="#" class="btn btn-sm btn-success"><i class="bi bi-download text-white"></i> Download Invoice</a> 
+                            </div> 
+                        </header> 
+                        <hr> 
+                        <div class="row"> 
+                            <div class="col-md-4"> 
+                                <p class="fw-bold mb-0 text-success">Contact</p> 
+                                <hr>
+                                <p class="m-0"> 
+                                    Sunny Ade
+                                    <br> Phone: 0123456789 
+                                    <br> Email: sunny@mail.com 
+                                </p>
+                            </div> <!-- col.// --> 
+                            <div class="col-md-4 border-start"> 
+                                <p class="fw-bold mb-0 text-success">Shipping address</p> 
+                                <hr>
+                                <p class="m-0"> Nigeria
+                                    <br> 13 Ojemuyiwa Street, Ogba, Surulere 
+                                </p>
+                            </div> <!-- col.// --> 
+                            <div class="col-md-4 border-start">
+                                <p class="fw-bold mb-0 text-success">Payment</p> 
+                                <hr>
+                                <p class="m-0">
+                                    <!-- <span class="text-success"> Cash Payment </span>  -->
+                                    <dl class="dlist-align">
+                            <dt class="fw-bolder">Method:</dt> <dd>Cash Payment</dd>
+                        </dl>
+                        <dl class="dlist-align">
+                            <dt class="fw-bolder">No. of Items:</dt> <dd>3</dd>
+                        </dl>
+                        <dl class="dlist-align">
+                            <dt class="fw-bolder">Order Amount:</dt> <dd>N78,135.00</dd> 
+                        </dl> 
+                        <dl class="dlist-align">
+                            <dt class="fw-bolder">Discount:</dt> <dd>N0.00</dd> 
+                        </dl> 
+                        <dl class="dlist-align">
+                            <dt class="fw-bolder">Paid:</dt> <dd>N78,135.00</dd> 
+                        </dl> 
+                                </p>
+                            </div> <!-- col.// --> 
+                        </div> <!-- row.// --> 
+                        <hr>
+                        <ul class="row g-3">
+                            <li class="col-lg-4 col-md-6"> 
+                                <div class="itemside mb-3"> 
+                                    <div class="aside"> 
+                                        <img width="72" height="72" src="./assets/img/product-1.jpg" class="img-sm rounded border">
+                                    </div> 
+                                    <div class="info"> 
+                                        <p class="title">Apple SmartWatch Series 4 Space Gray</p> 
+                                        <strong>N25,137.00 (2 items)</strong> 
+                                    </div> 
+                                </div> 
+                            </li> 
+                            <li class="col-lg-4 col-md-6"> 
+                                <div class="itemside mb-3"> 
+                                    <div class="aside"> 
+                                        <img width="72" height="72" src="./assets/img/product-2.jpg" class="img-sm rounded border"> 
+                                    </div> 
+                                    <div class="info"> 
+                                        <p class="title">Gaming Headset with mic</p> 
+                                        <strong>N5,537.00 (1 item)</strong> 
+                                    </div> 
+                                </div> 
+                            </li> 
+                            <li class="col-lg-4 col-md-6"> 
+                                <div class="itemside mb-3"> 
+                                    <div class="aside"> 
+                                        <img width="72" height="72" src="./assets/img/product-4.jpg" class="img-sm rounded border"> 
+                                    </div> 
+                                    <div class="info"> 
+                                        <p class="title">Backpack for hiking</p> 
+                                        <strong>N2,137.00 (3 items)</strong> 
+                                    </div> 
+                                </div> 
+                            </li> 
+                            <li class="col-lg-4 col-md-6"> 
+                                <div class="itemside mb-3"> 
+                                    <div class="aside"> 
+                                        <img width="72" height="72" src="./assets/img/product-3.jpg" class="img-sm rounded border"> 
+                                    </div> 
+                                    <div class="info"> 
+                                        <p class="title">Milton Baby Lotion</p> 
+                                        <strong>N5,137.00 (2 items)</strong> 
+                                    </div> 
+                                </div> 
+                            </li> 
+                        </ul> 
+                    </div> <!-- card-body .// --> 
+                </article> <!-- card .// --> 
+                
+            </div>           
+            
         </div>
 
         <div class="card shadow-sm bg-light mt-4" id="cart-summary">
@@ -469,7 +610,7 @@
         currentView = viewId;
     }
     //initialise view
-    setView('products');
+    setView('thank-you');
 
     //iterate product lists
     products = [
