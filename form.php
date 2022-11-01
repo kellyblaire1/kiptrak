@@ -610,7 +610,7 @@
         currentView = viewId;
     }
     //initialise view
-    setView('thank-you');
+    setView('products');
 
     //iterate product lists
     products = [
