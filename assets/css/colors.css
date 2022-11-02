@@ -3766,7 +3766,7 @@
   
   .badge.badge-light-success {
     background-color: #D2FFE8;
-    color: #39DA8A !important;
+    color: #39DA8A!important;
   }
   
   .badge.bg-success.badge-glow, .badge.border-success.badge-glow, .badge.badge-success.badge-glow {
@@ -3819,7 +3819,8 @@
   
   .btn-light-success {
     background-color: #D2FFE8;
-    color: #39DA8A !important;
+    color: #3A0A8A !important;
+    border-color: #C3DEDF!important;
   }
   
   .btn-light-success:hover, .btn-light-success.hover {
