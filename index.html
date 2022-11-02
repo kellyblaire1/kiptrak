@@ -1,244 +1,336 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      content="width=device-width, initial-scale=1.0, user-scalable=0"
+      name="viewport"
+    />
 
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0, user-scalable=0" name="viewport">
+    <title>Dashboard :: CRM</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
 
-  <title>Dashboard :: CRM</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon" />
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <!-- Google Fonts -->
+    <link href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+      rel="stylesheet"
+    />
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.gstatic.com" rel="preconnect">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+    <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet" />
+    <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet" />
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet" />
+    <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet" />
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
-  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
-  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <link href="assets/css/colors.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.datatables.net/buttons/2.2.3/css/buttons.dataTables.min.css"
+    />
+  </head>
 
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
-  <link href="assets/css/colors.css" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
-  <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/buttons/2.2.3/css/buttons.dataTables.min.css">
-
-</head>
-
-<body>
-
-  <!-- ======= Header ======= -->
-  <header id="header" class="header fixed-top d-flex align-items-center">
-
-    <div class="d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo d-flex align-items-center">
-        <img src="assets/img/logo.png" alt="">
-        <span class="d-none d-lg-block project-name"></span>
-      </a>
-      <i class="bi bi-list toggle-sidebar-btn d-none d-md-block"></i>
-    </div><!-- End Logo -->
-
-    <div class="search-bar">
-      <form class="search-form d-flex align-items-center rounded-pill" method="POST" action="#">
-        <input type="text" name="query" placeholder="Search" title="Enter search keyword" class="rounded-pill">
-        <button type="submit" title="Search"><i class="bi bi-search"></i></button>
-      </form>
-    </div><!-- End Search Bar -->
-
-    <nav class="header-nav ms-auto">
-      <ul class="d-flex align-items-center">
-
-        <li class="nav-item d-block d-lg-none">
-          <a class="nav-link nav-icon search-bar-toggle " href="#">
-            <i class="bi bi-search"></i>
-          </a>
-        </li><!-- End Search Icon-->
-
-        <li class="nav-item me-3">
-          <a href="pos" class="btn btn-outline-primary rounded-pill d-flex"><i class="bi bi-basket"></i> <span class="ms-1 d-none d-md-block">POS</span></a>
-        </li>
-
-        <li class="nav-item dropdown">
-          <a class="nav-link nav-icon nav-link-expand" id="btnFullscreen" href="javascript:void(0)">
-            <i class="bi bi-fullscreen"></i>
-          </a>
-        </li><!-- End Notification Nav -->
-
-        <li class="nav-item dropdown">
-
-          <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
-            <i class="bi bi-bell"></i>
-            <span class="badge bg-primary badge-number">3</span>
-          </a><!-- End Messages Icon -->
-
-          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages">
-            <li class="dropdown-header">
-              You have 3 new messages
-              <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li class="message-item">
-              <a href="#">
-                <img src="assets/img/messages-1.jpg" alt="" class="rounded-circle">
-                <div>
-                  <h4>Maria Hudson</h4>
-                  <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
-                  <p>4 hrs. ago</p>
-                </div>
-              </a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li class="message-item">
-              <a href="#">
-                <img src="assets/img/messages-2.jpg" alt="" class="rounded-circle">
-                <div>
-                  <h4>Anna Nelson</h4>
-                  <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
-                  <p>6 hrs. ago</p>
-                </div>
-              </a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li class="message-item">
-              <a href="#">
-                <img src="assets/img/messages-3.jpg" alt="" class="rounded-circle">
-                <div>
-                  <h4>David Muldon</h4>
-                  <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
-                  <p>8 hrs. ago</p>
-                </div>
-              </a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li class="dropdown-footer">
-              <a href="#">Show all messages</a>
-            </li>
-
-          </ul><!-- End Messages Dropdown Items -->
-
-        </li><!-- End Messages Nav -->
-
-        <li class="nav-item dropdown pe-3">
-
-          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-            <span class="d-none d-md-block dropdown-toggle ps-2">Super Admin</span>
-            <span class="text-muted">|</span>
-            <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-          </a><!-- End Profile Iamge Icon -->
-
-          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
-            <li class="dropdown-header">
-              <h6>Kelly O.</h6>
-              <span>Super Admin</span>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li>
-              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
-                <i class="bi bi-person"></i>
-                <span>My Profile</span>
-              </a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li>
-              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
-                <i class="bi bi-gear"></i>
-                <span>Account Settings</span>
-              </a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li>
-              <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
-                <i class="bi bi-question-circle"></i>
-                <span>Need Help?</span>
-              </a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li>
-              <a class="dropdown-item d-flex align-items-center" href="#">
-                <i class="bi bi-box-arrow-right"></i>
-                <span>Sign Out</span>
-              </a>
-            </li>
-
-          </ul><!-- End Profile Dropdown Items -->
-        </li><!-- End Profile Nav -->
-
-        <li>
-        </li>
-        <i class="bi bi-list toggle-sidebar-btn"></i>        
-      </ul>
-    </nav><!-- End Icons Navigation -->
-
-  </header><!-- End Header -->
-
-  <!-- ======= Sidebar ======= -->
-  <aside id="sidebar" class="sidebar">
-
-    <ul class="sidebar-nav" id="sidebar-nav">
-
-    </ul>
-
-  </aside><!-- End Sidebar-->
-
-  <main id="main" class="main">
-
-    <div class="pagetitle">
-      <h1>Dashboard</h1>
-      <nav>
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-          <li class="breadcrumb-item active">Dashboard</li>
-        </ol>
-      </nav>
-    </div><!-- End Page Title -->
-    <div id="liveAlertPlaceholder"></div>
-    
-    <div class="text-lg-end text-center mb-3">
-      <div class="btn-group" role="group" aria-label="Basic example">
-        <button type="button" class="btn btn-sm btn-light-success active">Today</button>
-        <button type="button" class="btn btn-sm btn-light-success">Weekly</button>
-        <button type="button" class="btn btn-sm btn-light-success">Monthly</button>
-        <button type="button" class="btn btn-sm btn-light-success">Yearly</button>
-        <button type="button" class="btn btn-sm btn-light-success">All</button>
+  <body>
+    <!-- ======= Header ======= -->
+    <header id="header" class="header fixed-top d-flex align-items-center">
+      <div class="d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-center">
+          <img src="assets/img/logo.png" alt="" />
+          <span class="d-none d-lg-block project-name"></span>
+        </a>
+        <i class="bi bi-list toggle-sidebar-btn d-none d-md-block"></i>
       </div>
-    </div>
-    <hr>
-    
-    <section class="section m-0">
-      <div class="row">
+      <!-- End Logo -->
+
+      <div class="search-bar">
+        <form
+          class="search-form d-flex align-items-center rounded-pill"
+          method="POST"
+          action="#"
+        >
+          <input
+            type="text"
+            name="query"
+            placeholder="Search"
+            title="Enter search keyword"
+            class="rounded-pill"
+          />
+          <button type="submit" title="Search">
+            <i class="bi bi-search"></i>
+          </button>
+        </form>
+      </div>
+      <!-- End Search Bar -->
+
+      <nav class="header-nav ms-auto">
+        <ul class="d-flex align-items-center">
+          <li class="nav-item d-block d-lg-none">
+            <a class="nav-link nav-icon search-bar-toggle" href="#">
+              <i class="bi bi-search"></i>
+            </a>
+          </li>
+          <!-- End Search Icon-->
+
+          <li class="nav-item me-3">
+            <a href="pos" class="btn btn-outline-primary rounded-pill d-flex"
+              ><i class="bi bi-basket"></i>
+              <span class="ms-1 d-none d-md-block">POS</span></a
+            >
+          </li>
+
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link nav-icon nav-link-expand"
+              id="btnFullscreen"
+              href="javascript:void(0)"
+            >
+              <i class="bi bi-fullscreen"></i>
+            </a>
+          </li>
+          <!-- End Notification Nav -->
+
+          <li class="nav-item dropdown">
+            <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+              <i class="bi bi-bell"></i>
+              <span class="badge bg-primary badge-number">3</span> </a
+            ><!-- End Messages Icon -->
+
+            <ul
+              class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages"
+            >
+              <li class="dropdown-header">
+                You have 3 new messages
+                <a href="#"
+                  ><span class="badge rounded-pill bg-primary p-2 ms-2"
+                    >View all</span
+                  ></a
+                >
+              </li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+
+              <li class="message-item">
+                <a href="#">
+                  <img
+                    src="assets/img/messages-1.jpg"
+                    alt=""
+                    class="rounded-circle"
+                  />
+                  <div>
+                    <h4>Maria Hudson</h4>
+                    <p>
+                      Velit asperiores et ducimus soluta repudiandae labore
+                      officia est ut...
+                    </p>
+                    <p>4 hrs. ago</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+
+              <li class="message-item">
+                <a href="#">
+                  <img
+                    src="assets/img/messages-2.jpg"
+                    alt=""
+                    class="rounded-circle"
+                  />
+                  <div>
+                    <h4>Anna Nelson</h4>
+                    <p>
+                      Velit asperiores et ducimus soluta repudiandae labore
+                      officia est ut...
+                    </p>
+                    <p>6 hrs. ago</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+
+              <li class="message-item">
+                <a href="#">
+                  <img
+                    src="assets/img/messages-3.jpg"
+                    alt=""
+                    class="rounded-circle"
+                  />
+                  <div>
+                    <h4>David Muldon</h4>
+                    <p>
+                      Velit asperiores et ducimus soluta repudiandae labore
+                      officia est ut...
+                    </p>
+                    <p>8 hrs. ago</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+
+              <li class="dropdown-footer">
+                <a href="#">Show all messages</a>
+              </li>
+            </ul>
+            <!-- End Messages Dropdown Items -->
+          </li>
+          <!-- End Messages Nav -->
+
+          <li class="nav-item dropdown pe-3">
+            <a
+              class="nav-link nav-profile d-flex align-items-center pe-0"
+              href="#"
+              data-bs-toggle="dropdown"
+            >
+              <span class="d-none d-md-block dropdown-toggle ps-2"
+                >Super Admin</span
+              >
+              <span class="text-muted">|</span>
+              <img
+                src="assets/img/profile-img.jpg"
+                alt="Profile"
+                class="rounded-circle"
+              /> </a
+            ><!-- End Profile Iamge Icon -->
+
+            <ul
+              class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile"
+            >
+              <li class="dropdown-header">
+                <h6>Kelly O.</h6>
+                <span>Super Admin</span>
+              </li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+
+              <li>
+                <a
+                  class="dropdown-item d-flex align-items-center"
+                  href="users-profile.html"
+                >
+                  <i class="bi bi-person"></i>
+                  <span>My Profile</span>
+                </a>
+              </li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+
+              <li>
+                <a
+                  class="dropdown-item d-flex align-items-center"
+                  href="users-profile.html"
+                >
+                  <i class="bi bi-gear"></i>
+                  <span>Account Settings</span>
+                </a>
+              </li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+
+              <li>
+                <a
+                  class="dropdown-item d-flex align-items-center"
+                  href="pages-faq.html"
+                >
+                  <i class="bi bi-question-circle"></i>
+                  <span>Need Help?</span>
+                </a>
+              </li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+
+              <li>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <i class="bi bi-box-arrow-right"></i>
+                  <span>Sign Out</span>
+                </a>
+              </li>
+            </ul>
+            <!-- End Profile Dropdown Items -->
+          </li>
+          <!-- End Profile Nav -->
+
+          <li></li>
+          <i class="bi bi-list toggle-sidebar-btn"></i>
+        </ul>
+      </nav>
+      <!-- End Icons Navigation -->
+    </header>
+    <!-- End Header -->
+
+    <!-- ======= Sidebar ======= -->
+    <aside id="sidebar" class="sidebar">
+      <ul class="sidebar-nav" id="sidebar-nav"></ul>
+    </aside>
+    <!-- End Sidebar-->
+
+    <main id="main" class="main">
+      <div class="pagetitle">
+        <h1>Dashboard</h1>
+        <nav>
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item active">Dashboard</li>
+          </ol>
+        </nav>
+      </div>
+      <!-- End Page Title -->
+      <div id="liveAlertPlaceholder"></div>
+
+      <div class="text-lg-end text-center mb-3">
+        <div class="btn-group" role="group" aria-label="Basic example">
+          <button type="button" class="btn btn-sm btn-light-success active">
+            Today
+          </button>
+          <button type="button" class="btn btn-sm btn-light-success">
+            Weekly
+          </button>
+          <button type="button" class="btn btn-sm btn-light-success">
+            Monthly
+          </button>
+          <button type="button" class="btn btn-sm btn-light-success">
+            Yearly
+          </button>
+          <button type="button" class="btn btn-sm btn-light-success">
+            All
+          </button>
+        </div>
+      </div>
+      <hr />
+
+      <section class="section m-0">
+        <div class="row">
           <!-- Sales Card -->
           <div class="col-lg-3 col-md-6">
             <div class="card bg-1">
@@ -246,7 +338,9 @@
                 <div class="d-flex align-items-center justify-content-between">
                   <div class="text-start">
                     <h2 class="fw-bold">N14,500</h2>
-                    <small class="text-uppercase small pt-1 fw-bold">Purchase Due</small>
+                    <small class="text-uppercase small pt-1 fw-bold"
+                      >Purchase Due</small
+                    >
                   </div>
                   <div class="rounded-circle float-end">
                     <i class="bi bi-box display-1 text-light-black"></i>
@@ -254,7 +348,8 @@
                 </div>
               </div>
             </div>
-          </div><!-- End Sales Card -->
+          </div>
+          <!-- End Sales Card -->
 
           <!-- Sales Card -->
           <div class="col-lg-3 col-md-6">
@@ -263,16 +358,21 @@
                 <div class="d-flex align-items-center justify-content-between">
                   <div class="text-start">
                     <h2 class="fw-bold">N0.00</h2>
-                    <small class="text-uppercase small pt-1 fw-bold">Sales Due</small>
+                    <small class="text-uppercase small pt-1 fw-bold"
+                      >Sales Due</small
+                    >
                   </div>
                   <div class="rounded-circle float-end">
-                    <i class="bi bi-calendar-minus display-1 text-light-black"></i>
+                    <i
+                      class="bi bi-calendar-minus display-1 text-light-black"
+                    ></i>
                   </div>
                 </div>
               </div>
             </div>
-          </div><!-- End Sales Card -->
-          
+          </div>
+          <!-- End Sales Card -->
+
           <!-- Sales Card -->
           <div class="col-lg-3 col-md-6">
             <div class="card bg-3">
@@ -280,7 +380,9 @@
                 <div class="d-flex align-items-center justify-content-between">
                   <div class="text-start">
                     <h2 class="fw-bold">N100</h2>
-                    <small class="text-uppercase small pt-1 fw-bold">Sales</small>
+                    <small class="text-uppercase small pt-1 fw-bold"
+                      >Sales</small
+                    >
                   </div>
                   <div class="rounded-circle float-end">
                     <i class="bi bi-cart-check display-1 text-light-black"></i>
@@ -288,7 +390,8 @@
                 </div>
               </div>
             </div>
-          </div><!-- End Sales Card -->            
+          </div>
+          <!-- End Sales Card -->
 
           <!-- Sales Card -->
           <div class="col-lg-3 col-md-6">
@@ -297,7 +400,9 @@
                 <div class="d-flex align-items-center justify-content-between">
                   <div class="text-start">
                     <h2 class="fw-bold">N500</h2>
-                    <small class="text-uppercase small pt-1 fw-bold">Expenses</small>
+                    <small class="text-uppercase small pt-1 fw-bold"
+                      >Expenses</small
+                    >
                   </div>
                   <div class="rounded-circle float-end">
                     <i class="bi bi-cash-coin display-1 text-light-black"></i>
@@ -305,12 +410,13 @@
                 </div>
               </div>
             </div>
-          </div><!-- End Sales Card -->            
+          </div>
+          <!-- End Sales Card -->
         </div>
-    </section>
-    
-    <section class="section m-0">
-      <div class="row">
+      </section>
+
+      <section class="section m-0">
+        <div class="row">
           <!-- Card -->
           <div class="col-lg-3 col-md-6">
             <div class="card border-right-warning card-right-border">
@@ -321,12 +427,15 @@
                   </div>
                   <div class="text-start">
                     <h2 class="fw-bold">6</h2>
-                    <small class="text-uppercase text-muted small pt-1 fw-bold">Customers</small>
+                    <small class="text-uppercase text-muted small pt-1 fw-bold"
+                      >Customers</small
+                    >
                   </div>
                 </div>
               </div>
             </div>
-          </div><!-- End Card -->
+          </div>
+          <!-- End Card -->
           <!-- Card -->
           <div class="col-lg-3 col-md-6">
             <div class="card border-right-primary card-right-border">
@@ -337,13 +446,16 @@
                   </div>
                   <div class="text-start">
                     <h2 class="fw-bold">4</h2>
-                    <small class="text-uppercase text-muted small pt-1 fw-bold">Suppliers</small>
+                    <small class="text-uppercase text-muted small pt-1 fw-bold"
+                      >Suppliers</small
+                    >
                   </div>
                 </div>
               </div>
             </div>
-          </div><!-- End Card -->
-          
+          </div>
+          <!-- End Card -->
+
           <!-- Card -->
           <div class="col-lg-3 col-md-6">
             <div class="card border-right-success card-right-border">
@@ -354,310 +466,469 @@
                   </div>
                   <div class="text-start">
                     <h2 class="fw-bold">0</h2>
-                    <small class="text-uppercase text-muted small pt-1 fw-bold">Purchases</small>
+                    <small class="text-uppercase text-muted small pt-1 fw-bold"
+                      >Purchases</small
+                    >
                   </div>
                 </div>
               </div>
             </div>
-          </div><!-- End Card -->
-          
+          </div>
+          <!-- End Card -->
+
           <!-- Card -->
           <div class="col-lg-3 col-md-6">
             <div class="card border-right-danger card-right-border">
               <div class="card-body p-2">
                 <div class="d-flex align-items-center justify-content-start">
                   <div class="border rounded shadow-sm px-2 me-2">
-                    <i class="bi bi-file-earmark-pdf display-1 text-light-black"></i>
+                    <i
+                      class="bi bi-file-earmark-pdf display-1 text-light-black"
+                    ></i>
                   </div>
                   <div class="text-start">
                     <h2 class="fw-bold">0</h2>
-                    <small class="text-uppercase text-muted small pt-1 fw-bold">Invoices</small>
+                    <small class="text-uppercase text-muted small pt-1 fw-bold"
+                      >Invoices</small
+                    >
                   </div>
                 </div>
               </div>
             </div>
-          </div><!-- End Card -->
-      </div>
-    </section>
-
-    <hr>
-
-    <section class="section">
-      <div class="row">    
-        <!-- Reports -->
-        <div class="col-md-8">
-          <div class="card card-top-border border-top-success">
-
-            <div class="card-body">
-              <h5 class="card-title">Purchase, Sales & Expense Chart</h5>
-
-              <!-- Line Chart -->
-              <div id="reportsChart"></div>
-
-              <!-- End Line Chart -->
-
-            </div>
-
           </div>
-        </div><!-- End Reports -->
-
-        <div class="col-md-4">
-          <div class="card border-top-5 border-top-warning card-top-border">
-            <div class="card-body">
-              <div class="card-title">Recently Added Items</div>
-
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th scope="col">Photo</th>
-                    <th scope="col">Item</th>
-                    <th scope="col">Sales Price</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">
-                      <img src="./assets/img/product-1.jpg" width="50" class="img-thumbnail img-fluid" alt="Product">
-                    </th>
-                    <td class="align-middle">Nike Shoe</td>
-                    <td class="align-middle">N10,000</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
+          <!-- End Card -->
         </div>
+      </section>
 
-      </div>
-    </section>
+      <hr />
 
-    <section class="section">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="card card-top-border border-top-primary">
-            <div class="card-body">
-              <div class="card-title">Stock Alert</div>
-              <div class="table table-responsive">
-                <table id="stock-table" class="table table-striped" style="width:100%">
+      <section class="section">
+        <div class="row">
+          <!-- Reports -->
+          <div class="col-md-8">
+            <div class="card card-top-border border-top-success">
+              <div class="card-body">
+                <h5 class="card-title">Purchase, Sales & Expense Chart</h5>
+
+                <!-- Line Chart -->
+                <!-- <div id="reportsChart"></div> -->
+                <div>
+                  <canvas class="bar-chartcanvas"></canvas>
+                </div>
+
+                <!-- End Line Chart -->
+              </div>
+            </div>
+          </div>
+          <!-- End Reports -->
+
+          <div class="col-md-4">
+            <div class="card border-top-5 border-top-warning card-top-border">
+              <div class="card-body">
+                <div class="card-title">Recently Added Items</div>
+
+                <table class="table">
                   <thead>
                     <tr>
-                      <th scope="col">#</th>
-                      <th scope="col">Item Name</th>
-                      <th scope="col">Category Name</th>
-                      <th scope="col">Brand Name</th>
-                      <th scope="col">Stock</th>
+                      <th scope="col">Photo</th>
+                      <th scope="col">Item</th>
+                      <th scope="col">Sales Price</th>
                     </tr>
                   </thead>
                   <tbody>
+                    <tr>
+                      <th scope="row">
+                        <img
+                          src="./assets/img/product-1.jpg"
+                          width="50"
+                          class="img-thumbnail img-fluid"
+                          alt="Product"
+                        />
+                      </th>
+                      <td class="align-middle">Nike Shoe</td>
+                      <td class="align-middle">N10,000</td>
+                    </tr>
                   </tbody>
                 </table>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    
-
-    <section class="section">
-      <div class="row">    
-        <!-- Reports -->
-        <div class="col-lg-6">
-          <div class="card card-top-border border-top-success">
-
-            <div class="card-body">
-              <h5 class="card-title">Top 10 Trending Items</h5>
-
-              <!-- Line Chart -->
-              <div>
-                <canvas id="doughnut-chart" width="100%"></canvas>
+      <section class="section">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card card-top-border border-top-primary">
+              <div class="card-body">
+                <div class="card-title">Stock Alert</div>
+                <div class="table table-responsive">
+                  <table
+                    id="stock-table"
+                    class="table table-striped"
+                    style="width: 100%"
+                  >
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Item Name</th>
+                        <th scope="col">Category Name</th>
+                        <th scope="col">Brand Name</th>
+                        <th scope="col">Stock</th>
+                      </tr>
+                    </thead>
+                    <tbody></tbody>
+                  </table>
+                </div>
               </div>
-               
-              <!-- End Line Chart -->
-
-            </div>
-
-          </div>
-        </div><!-- End Reports -->
-
-        <div class="col-lg-6">
-          <div class="card border-top-5 border-top-warning card-top-border">
-            <div class="card-body">
-              <div class="card-title">Recent Sales Invoice</div>
-
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th scope="col">SI.No</th>
-                    <th scope="col">Date</th>
-                    <th scope="col">Invoice ID</th>
-                    <th scope="col">Customer</th>
-                    <th scope="col">Total</th>
-                    <th scope="col">Status</th>
-                    <th scope="col">Created By</th>
-                  </tr>
-                </thead>
-                <tbody>
-                </tbody>
-              </table>
             </div>
           </div>
         </div>
+      </section>
 
+      <section class="section">
+        <div class="row">
+          <!-- Reports -->
+          <div class="col-lg-6">
+            <div class="card card-top-border border-top-success">
+              <div class="card-body">
+                <h5 class="card-title">Top 10 Trending Items</h5>
+
+                <!-- Line Chart -->
+                <div>
+                  <canvas id="doughnut-chart" width="100%"></canvas>
+                </div>
+
+                <!-- End Line Chart -->
+              </div>
+            </div>
+          </div>
+          <!-- End Reports -->
+
+          <div class="col-lg-6">
+            <div class="card border-top-5 border-top-warning card-top-border">
+              <div class="card-body">
+                <div class="card-title">Recent Sales Invoice</div>
+
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">SI.No</th>
+                      <th scope="col">Date</th>
+                      <th scope="col">Invoice ID</th>
+                      <th scope="col">Customer</th>
+                      <th scope="col">Total</th>
+                      <th scope="col">Status</th>
+                      <th scope="col">Created By</th>
+                    </tr>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer" class="footer">
+      <div class="copyright">
+        &copy; <span class="copyright-date"></span>
+        <strong><span class="project-name"></span></strong>. All rights reserved
       </div>
-    </section>
-  </main><!-- End #main -->
+    </footer>
+    <!-- End Footer -->
 
-  <!-- ======= Footer ======= -->
-  <footer id="footer" class="footer">
-    <div class="copyright">
-      &copy; <span class="copyright-date"></span> <strong><span class="project-name"></span></strong>. All rights reserved
-    </div>
-  </footer><!-- End Footer -->
+    <a
+      href="#"
+      class="back-to-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <!-- Vendor JS Files -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/chart.js/chart.min.js"></script>
+    <script src="assets/vendor/echarts/echarts.min.js"></script>
+    <script src="assets/vendor/quill/quill.min.js"></script>
+    <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+    <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script
+      type="text/javascript"
+      charset="utf8"
+      src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      charset="utf8"
+      src="https://cdn.datatables.net/buttons/2.2.3/js/dataTables.buttons.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      charset="utf8"
+      src="//cdn.datatables.net/buttons/2.2.3/js/buttons.bootstrap5.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      charset="utf8"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      charset="utf8"
+      src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      charset="utf8"
+      src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"
+    ></script>
+    <script
+      type="text/javascript"
+      charset="utf8"
+      src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"
+    ></script>
+    <script
+      type="text/javascript"
+      charset="utf8"
+      src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.html5.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      charset="utf8"
+      src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.print.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      charset="utf8"
+      src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.colVis.min.js"
+    ></script>
 
-  <!-- Vendor JS Files -->
-  <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/chart.js/chart.min.js"></script>
-  <script src="assets/vendor/echarts/echarts.min.js"></script>
-  <script src="assets/vendor/quill/quill.min.js"></script>
-  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
-  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
-  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/buttons/2.2.3/js/dataTables.buttons.min.js"></script>
-  <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/buttons/2.2.3/js/buttons.bootstrap5.min.js"></script>
-  <script type="text/javascript" charset="utf8" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
-  <script type="text/javascript" charset="utf8" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
-  <script type="text/javascript" charset="utf8" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
-  <script type="text/javascript" charset="utf8" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
-  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.html5.min.js"></script>
-  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.print.min.js"></script>
-  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.colVis.min.js"></script>
-  
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js?v=1.2x"></script>
+    <script src="assets/js/navigation.js?v=1.3xx4"></script>
 
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js?v=1.2x"></script>
-  <script src="assets/js/navigation.js?v=1.3xx4"></script>
-  
-  <script>
-    
-
-    $(document).ready(function () {
-        $('#stock-table').DataTable({
-          dom: 'Bflrtip',
+    <script>
+      $(document).ready(function () {
+        $("#stock-table").DataTable({
+          dom: "Bflrtip",
           buttons: {
             buttons: [
-              { extend: 'copy', className: 'btn btn-teal btn-sm' },
-              { extend: 'excel', className: 'btn btn-teal btn-sm' },
-              { extend: 'pdf', className: 'btn btn-teal btn-sm'},
-              { extend: 'print', className: 'btn btn-teal btn-sm'},
-              { extend: 'csv', className: 'btn btn-teal btn-sm'},
-            ]
+              { extend: "copy", className: "btn btn-teal btn-sm" },
+              { extend: "excel", className: "btn btn-teal btn-sm" },
+              { extend: "pdf", className: "btn btn-teal btn-sm" },
+              { extend: "print", className: "btn btn-teal btn-sm" },
+              { extend: "csv", className: "btn btn-teal btn-sm" },
+            ],
           },
         });
+
+        const alertPlaceholder = document.getElementById(
+          "liveAlertPlaceholder"
+        );
+
+        const alert = (message, type) => {
+          const wrapper = document.createElement("div");
+          wrapper.innerHTML = [
+            `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+            `   <div>${message}</div>`,
+            '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+            "</div>",
+          ].join("");
+
+          alertPlaceholder.append(wrapper);
+        };
+
+        alert("Nice, you triggered this alert message!", "danger");
+      });
+    </script>
+
+    <script>
+       'use strict';
+
+      window.chartColors = {
+        red: "rgb(255, 50, 10)",
+        orange: "rgb(255, 102, 64)",
+        yellow: "rgb(230, 184, 0)",
+        green: "rgb(0, 179, 0)",
+        blue: "rgb(0, 0, 230)",
+        purple: "rgb(134, 0, 179)",
+        grey: "rgb(117, 117, 163)",
+      };
+
+      var MONTHS = [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December",
+      ];
+
+      var COLORS = [
+        "#4dc9f6",
+        "#f67019",
+        "#f53794",
+        "#537bc4",
+        "#acc236",
+        "#166a8f",
+        "#00a950",
+        "#58595b",
+        "#8549ba",
+      ];
+      //BAR CHART
+      $(function () {
+        //get the bar chart canvas
+        var ctx = $(".bar-chartcanvas");
+
+        //bar chart data
+        var data = {
+          labels: [
+            "May,2022",
+            "Jun,2022",
+            "Jul,2022",
+            "Aug,2022",
+            "Sep,2022",
+            "Oct,2022",
+            "Nov,2022",
+          ],
+          datasets: [
+            {
+              label: "Purchase",
+              data: [
+                "0.0000",
+                "0.0000",
+                "0.0000",
+                "0.0000",
+                "0.0000",
+                "0.0000",
+                "0.0000",
+              ],
+              borderColor: window.chartColors.red,
+              backgroundColor: window.chartColors.red,
+              borderWidth: 1,
+            },
+            {
+              label: "Sales",
+              data: [
+                "0.0000",
+                "0.0000",
+                "0.0000",
+                "0.0000",
+                "0.0000",
+                "0.0000",
+                "0.0000",
+              ],
+              borderColor: window.chartColors.blue,
+              backgroundColor: window.chartColors.blue,
+              borderWidth: 1,
+            },
+            {
+              label: "Expense",
+              data: [
+                "0.0000",
+                "0.0000",
+                "0.0000",
+                "0.0000",
+                "0.0000",
+                "0.0000",
+                "0.0000",
+              ],
+              borderColor: window.chartColors.green,
+              backgroundColor: window.chartColors.green,
+              borderWidth: 1,
+            },
+          ],
+        };
+
+        //options
+        var options = {
+          responsive: true,
+          title: {
+            display: true,
+            position: "top",
+            fontSize: 18,
+            fontColor: "#111",
+          },
+          legend: {
+            display: true,
+            position: "top",
+            labels: {
+              fontColor: "#333",
+              fontSize: 16,
+            },
+          },
+          scales: {
+            yAxes: [
+              {
+                ticks: {
+                  min: 0,
+                },
+              },
+            ],
+          },
+        };
+        //create Chart class object
+        var chart = new Chart(ctx, {
+          type: "bar",
+          data: data,
+          options: options,
+        });
       
-      const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
 
-      const alert = (message, type) => {
-        const wrapper = document.createElement('div')
-        wrapper.innerHTML = [
-          `<div class="alert alert-${type} alert-dismissible" role="alert">`,
-          `   <div>${message}</div>`,
-          '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
-          '</div>'
-        ].join('')
+      /** DOUGHNUT CHART */
+      //PIE CHART
 
-        alertPlaceholder.append(wrapper)
-      }
-
-      alert('Nice, you triggered this alert message!', 'danger')  
-    });
-  </script>
-  
-  <script>
-    // REPORT CURVE CHART
-    document.addEventListener("DOMContentLoaded", () => {
-      new ApexCharts(document.querySelector("#reportsChart"), {
-        series: [{
-          name: 'Purchase',
-          data: [31, 40, 28, 51, 42, 82, 56],
-        }, {
-          name: 'Sales',
-          data: [11, 32, 45, 32, 34, 52, 41]
-        }, {
-          name: 'Expenses',
-          data: [15, 11, 32, 18, 9, 24, 11]
-        }],
-        chart: {
-          height: 350,
-          type: 'area',
-          toolbar: {
-            show: false
+      new Chart(document.getElementById("doughnut-chart"), {
+        type: "doughnut",
+        data: {
+          labels: [
+            "iPhone X-64GB",
+            "Redmi Note 10-128GB",
+            "Inspiron 14",
+            "iPhone X-128GB",
+            "Redmi Note 10-32GB",
+            "Colgate toothpaste",
+            "Redmi Note 10-64GB",
+          ],
+          datasets: [
+            {
+              label: "Top Items",
+              backgroundColor: [
+                "#6666ff",
+                "#ff3399",
+                "#00cc99",
+                "#cccc00",
+                "#ff6600",
+                window.chartColors.red, //above color settings
+              ],
+              data: ["7.00", "5.00", "4.00", "4.00", "2.00", "1.00", "1.00"],
+            },
+          ],
+        },
+        options: {
+          title: {
+            display: true,
+            text: "Top 10 Trending Items",
           },
         },
-        markers: {
-          size: 4
-        },
-        colors: ['#4154f1', '#2eca6a', '#ff771d'],
-        fill: {
-          type: "gradient",
-          gradient: {
-            shadeIntensity: 1,
-            opacityFrom: 0.3,
-            opacityTo: 0.4,
-            stops: [0, 90, 100]
-          }
-        },
-        dataLabels: {
-          enabled: false
-        },
-        stroke: {
-          curve: 'smooth',
-          width: 2
-        },
-        xaxis: {
-          type: 'datetime',
-          categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"]
-        },
-        tooltip: {
-          x: {
-            format: 'dd/MM/yy HH:mm'
-          },
-        }
-      }).render();
+      });
+
     });
-  </script>
-  
-  <script>
-    /** DOUGHNUT CHART */
-    //PIE CHART
-  
-  new Chart(document.getElementById("doughnut-chart"), {
-      type: 'doughnut',
-      data: {
-        labels: ['iPhone X-64GB','Redmi Note 10-128GB','Inspiron 14','iPhone X-128GB','Redmi Note 10-32GB','Colgate toothpaste','Redmi Note 10-64GB',],
-        datasets: [
-          {
-            label: "Top Items",
-            backgroundColor: ["#6666ff", "#ff3399","#00cc99","#cccc00","#ff6600",""],
-            data: ['7.00','5.00','4.00','4.00','2.00','1.00','1.00',],
-          }
-        ]
-      },
-      options: {
-        title: {
-          display: true,
-          text: 'Top 10 Trending Items'
-        }
-      }
-  });
-  </script>
-
-</body>
-
+    </script>
+  </body>
 </html>
