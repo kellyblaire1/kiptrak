@@ -502,19 +502,62 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <th scope="row">2</th>
-                      <td>Jacob</td>
-                      <td>Thornton</td>
-                      <td>@fat</td>
-                      <td>@fat</td>
-                    </tr>
                   </tbody>
                 </table>
               </div>
             </div>
           </div>
         </div>
+      </div>
+    </section>
+
+    
+
+    <section class="section">
+      <div class="row">    
+        <!-- Reports -->
+        <div class="col-lg-6">
+          <div class="card card-top-border border-top-success">
+
+            <div class="card-body">
+              <h5 class="card-title">Top 10 Trending Items</h5>
+
+              <!-- Line Chart -->
+              <div>
+                <canvas id="doughnut-chart" width="100%"></canvas>
+              </div>
+               
+              <!-- End Line Chart -->
+
+            </div>
+
+          </div>
+        </div><!-- End Reports -->
+
+        <div class="col-lg-6">
+          <div class="card border-top-5 border-top-warning card-top-border">
+            <div class="card-body">
+              <div class="card-title">Recent Sales Invoice</div>
+
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">SI.No</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Invoice ID</th>
+                    <th scope="col">Customer</th>
+                    <th scope="col">Total</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Created By</th>
+                  </tr>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
   </main><!-- End #main -->
@@ -559,7 +602,7 @@
 
     $(document).ready(function () {
         $('#stock-table').DataTable({
-          dom: 'Bfrtip',
+          dom: 'Bflrtip',
           buttons: {
             buttons: [
               { extend: 'copy', className: 'btn btn-teal btn-sm' },
@@ -587,6 +630,31 @@
 
       alert('Nice, you triggered this alert message!', 'danger')  
     });
+  </script>
+  
+  <script>
+    /** DOUGHNUT CHART */
+    //PIE CHART
+  
+  new Chart(document.getElementById("doughnut-chart"), {
+      type: 'doughnut',
+      data: {
+        labels: ['iPhone X-64GB','Redmi Note 10-128GB','Inspiron 14','iPhone X-128GB','Redmi Note 10-32GB','Colgate toothpaste','Redmi Note 10-64GB',],
+        datasets: [
+          {
+            label: "Top Items",
+            backgroundColor: ["#6666ff", "#ff3399","#00cc99","#cccc00","#ff6600",""],
+            data: ['7.00','5.00','4.00','4.00','2.00','1.00','1.00',],
+          }
+        ]
+      },
+      options: {
+        title: {
+          display: true,
+          text: 'Top 10 Trending Items'
+        }
+      }
+  });
   </script>
 
 </body>
