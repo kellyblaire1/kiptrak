@@ -86,6 +86,13 @@ navigation = [
           icon: 'bi bi-people-fill',
         },
       ]
+    }, 
+    {
+      name: 'Messaging',
+      id: 'agents',
+      url: 'messaging',
+      icon: 'bi bi-envelope',
+      children: []
     },  
   ];
 
